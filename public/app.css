@@ -13,13 +13,14 @@ body {
 
 .logo {
     font-size:40pt;
-    color: rgba(176, 194, 96, 0.72);
+    /*color: rgba(176, 194, 96, 0.72);*/
+    color: rgba(0, 150, 136, 0.72);
     display:inline-block;
 
 }
 
 .logo:hover {
-    color: rgb(176, 194, 96);
+    color: rgb(0, 150, 136);
 }
 
 .event {
@@ -29,6 +30,11 @@ body {
 .event-title {
     font-size:27pt;
     margin-bottom:0px;
+}
+
+.navigation {
+    background-color: #009688;
+    color:white;
 }
 
 .nav-list {
@@ -46,12 +52,13 @@ body {
     text-decoration:none;
     text-align:center;
     padding:10px 5px;
-    color:rgb(98,98,98);
+    /*color:rgb(98,98,98);*/
+    color:white;
     border-bottom:2px solid transparent;
 }
 
 .nav-list>li>a:hover, .nav-list a.active {
-    border-bottom:2px solid rgb(98,98,98);
+    border-bottom:2px solid #00574F;
 }
 
 
