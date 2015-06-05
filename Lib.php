@@ -9,8 +9,15 @@ class Issue
     public $id;
 
     public function insert(){
-        $res = DB::query('INSERT INTO issues (description) values (?)', $this->description);
-        $this->id = DB::db()->lastInsertId;
+        $res = DB::query('INSERT INTO issues (description,votes) values (?,0)', [$this->description]);
+        $this->id = DB::db()->lastInsertId();
+    }
+
+    public function update()
+    {
+        $res = DB::query('UPDATE issues SET description=?,votes=? WHERE id=?',[
+            $this->description, $this->votes, $this->id
+        ]);
     }
 
     public function toJson(){
@@ -21,37 +28,88 @@ class Issue
     }
 
     public static function findAll(){
-        $res = DB::query('SELECT * FROM issues');
+        $res = DB::query('SELECT * FROM issues ORDER BY votes DESC');
         $objs = [];
         while($row = $res->fetch()){
-            $obj = new static();
-            $obj->description = $row['description'];
-            $obj->votes = (int) $row['votes'];
-            $obj->id = (int) $row['id'];
-            $objs[] = $obj;
+
+            $objs[] = static::fromRow($row);
         }
 
         return $objs;
     }
 
 
+
+    public static function find($id)
+    {
+        $res = DB::query('SELECT * FROM issues WHERE id=?',[$id]);
+        $row = $res->fetch();
+        if($row)
+            return static::fromRow($row);
+    }
+
+    private static function fromRow($row)
+    {
+        $issue = new static();
+        $issue->description = $row['description'];
+        $issue->votes = (int) $row['votes'];
+        $issue->id = (int) $row['id'];
+        return $issue;
+    }
+
+
+
+
 }
 
+class Request
+{
+    public static function post($var,$default)
+    {
+        if(isset($_POST[$var]))
+            return $_POST[$var];
+        return $default;
+    }
+
+    public static function get($var,$default)
+    {
+        if(isset($_GET[$var]))
+            return $_POST[$var];
+        return $default;
+    }
+
+    public static function any($var, $default)
+    {
+        if(isset($_GET[$var]))
+            return $_GET[$var];
+        if(isset($_POST[$var]))
+            return $_POST[$var];
+        return $default;
+    }
+
+}
 
 class DB
 {
-    private $db;
+    private static $db;
 
     private function __construct()
     {
-        $this->db = new PDO(Config::db('connstr'), Config::db('user'), Config::db('pass'));
+        $envdb = getenv('DATABASE_URL');
+        $dbopts = parse_url($envdb);
+        $connstr = $envdb? 'pgsql:dbname='.ltrim($dbopts['path'],'/').';host='.$dbopts['host'] : Config::db('connstr');
+        $user = $envdb? $dbopts['user'] : Config::db('user');
+        $pass = $envdb? $dbopts['pass'] : Config::db('pass');
+
+        $this->db = new PDO($connstr, $user, $pass);
         $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
     public static function db()
     {
         if(!self::$db){
-            self::$db = new self();
+            $instance = new self();
+            self::$db = $instance->db;
         }
         return self::$db;
     }
@@ -76,15 +134,15 @@ class Config
     private static function load()
     {
         if(!self::$loaded){
-            if(file_exists('.config')){
-                $lines = file('.config', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            if(file_exists(__DIR__."/config")){
+                $lines = file(__DIR__.'/config', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
                 foreach($lines as $line){
                     $line = trim($line);
                     if($line[0] == "#")
                         continue;
-                    $line = strtolower($line);
+                    $line = $line;
                     $parts = explode("=", $line);
-                    $var = $parts[0];
+                    $var = strtolower($parts[0]);
                     $value = $parts[1];
                     $varParts = explode("_", $var);
                     $namespace = $varParts[0];
@@ -103,8 +161,8 @@ class Config
     {
         self::load();
         if(isset(self::$data[$func])){
-            if(count($args) > 0 && isset($data[$func][$args[0]])){
-                return $data[$func][$arg[0]];
+            if(count($args) > 0 && isset(self::$data[$func][$args[0]])){
+                return self::$data[$func][$args[0]];
             }
         }
         return count($args)>= 1? $args[1] : null;

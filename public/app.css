@@ -1,19 +1,138 @@
 body {
+    font-family:calibri;
+    font-size:12pt;
+    font-weight:lighter;
+}
+
+.header {
+    padding-top:10px;
+    padding-bottom:30px;
     background-color: rgb(58,58,58);
-    padding-top:100px;
+    font-family:Agency FB;
 }
 
-.well {
-    height:420px;
+.logo {
+    font-size:40pt;
+    color: rgba(176, 194, 96, 0.72);
+    display:inline-block;
 
 }
 
-.well .message {
-    margin-top:100px;
+.logo:hover {
+    color: rgb(176, 194, 96);
+}
+
+.event {
+    color:rgb(127, 179, 163);
     text-align:center;
-    font-size:50pt;
+}
+.event-title {
+    font-size:27pt;
+    margin-bottom:0px;
 }
 
-.message .small {
-    font-size:14pt;
+.nav-list {
+    list-style-type:none;
+    font-size:13pt;
+}
+
+.nav-list li{
+    display:inline-block;
+    padding:0px;
+}
+
+.nav-list li>a{
+    display:inline-block;
+    text-decoration:none;
+    text-align:center;
+    padding:10px 5px;
+    color:rgb(98,98,98);
+    border-bottom:2px solid transparent;
+}
+
+.nav-list>li>a:hover, .nav-list a.active {
+    border-bottom:2px solid rgb(98,98,98);
+}
+
+
+.navigation {
+    border-bottom:1px solid rgb(246,246,246);
+}
+
+.page {
+    padding-top:20px;
+    padding-bottom:80px;
+    color:rgb(109,109,109);
+}
+
+.editor {
+    font-size:13pt;
+}
+
+.loading {
+    text-align:center;
+    font-size:20pt;
+}
+
+.issue-item {
+    font-size:11pt;
+    font-style:italic;
+    border:1px solid rgb(200,200,200);
+
+    margin-bottom:5px;
+    border-radius:2px;
+    height:auto;
+}
+
+
+.issue-item .description, .issue-item .votes {
+    padding:20px 30px;
+    min-height:130px;
+}
+
+.issue-item .votes {
+    color:white;
+    background-color:rgb(184, 200, 81);
+    font-style:none;
+
+}
+
+.votes .vote-text {
+    color:white;
+    cursor:pointer;
+    display:block;
+    text-align:center;
+}
+
+.votes:hover .vote-text {
+    text-decoration:underline;
+}
+
+.issue-item .vote-count {
+    text-align:center;
+    font-size:28pt;
+    font-weight:bold;
+    display:block;
+    padding:0px;
+    margin:0px;
+}
+
+.issue-viewer .modal-title{
+    display:inline-block;
+}
+
+.issue-viewer .votes {
+    display:inline-block;
+    font-size:15pt
+}
+
+.issue-viewer .vote-text, .issue-view .vote-count {
+    color:rgb(158,106,106);
+    display:inline-block;
+}
+
+.issue-viewer .vote-count {
+    font-size:15pt;
+    font-weight:normal;
+
 }

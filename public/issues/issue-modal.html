@@ -1,0 +1,15 @@
+<div class="issue-viewer">
+    <div class="modal-header">
+        <h3 class="modal-title">Issue #{{issue.id}}</h3>
+        <div class="votes pull-right" ng-click="vote(issue)">
+            <span class="vote-text" ><i class="fa fa-hand-o-up"></i></span>
+            <span class="vote-count">{{issue.votes}}</span>
+        </div>
+    </div>
+    <div class="modal-body">
+        <p>{{issue.description}}</p>
+    </div>
+    <div class="modal-footer">
+
+    </div>
+</div>

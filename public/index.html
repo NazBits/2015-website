@@ -1,36 +1,74 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>NazBits iClinic</title>
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="app.css" rel="stylesheet">
     </head>
-<body ng-app="iClinic">
+<body ng-app="iClinic" ng-controller="RootController">
 
     <header class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="well col-md-8 col-md-offset-2">
-                    <div class="message">
-                        <p>//nazbits iClinic</p>
-                        <p>Coming Soon</p>
-                        <p class="small">(Thursday 11.06.2015)</p>
+                <div class="col-md-10 col-md-offset-1">
+                    <div class="col-md-6">
+                        <h1 class="logo">#NazBits Club</h1>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="event pull-right">
+                            <h2 class="event-title">iClinic</h2>
+                            <span class="event-date">11.06.2015</span>
+                        </div>
+                        <div class='clearfix'></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </header>
 
-    <nav>
-
+    <nav class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <ul class="nav-list">
+                        <li class="col-md-3 col-md-offset-1">
+                            <a href="#/issues" ng-class="{active:page=='/issues'}"><i class="glyphicon glyphicon-list-alt"></i>
+                                Issues</a>
+                        </li>
+                        <li class="col-md-3">
+                            <a href="#/new" ng-class="{active:page=='/new'}"><i class="glyphicon glyphicon-edit"></i>
+                                Post Issue</a></li>
+                        <li class="col-md-3"><a href="#/antivirus" ng-class="{active:page=='/antivirus'}"">
+                            <i class="fa fa-shield"></i>
+                                Antivirus</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </nav>
 
     <div class="page">
-        <ng-view></ng-view>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <ng-view></ng-view>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/underscore.string/dist/underscore.string.min.js"></script>
     <script src="app.js"></script>
+    <script src="new/new.js"></script>
+    <script src="issues/issues.js"></script>
+    <script src="antivirus/antivirus.js"></script>
+    <script src="components/issue/issue-service.js"></script>
+    <script src="components/request/request-service.js"></script>
+    <script src="components/excerpt/excerpt-filter.js"></script>
 </body>
 </html>

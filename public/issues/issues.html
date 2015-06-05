@@ -1,0 +1,19 @@
+
+<div class="">
+    <div class="loading" ng-show="loading">
+        <i class="fa fa-spinner fa-spin"></i><br>
+        loading
+    </div>
+    <div ng-hide="loading" class="issue-item" ng-repeat="issue in issues">
+        <div class="col-md-10 description">
+            <p>{{issue.description | excerpt}}</p>
+            <button class="btn btn-default" ng-click="open(issue)"><i class="fa fa-file-text-o"></i> Read More</button>
+        </div>
+        <div class="col-md-2 votes" ng-click="vote(issue)">
+            <span class="vote-text" ><i class="fa fa-hand-o-up"></i> Me Too</a></span>
+            <span class="vote-count">{{issue.votes}}</span>
+        </div>
+
+        <span class="clearfix"></span>
+    </div>
+</div>
