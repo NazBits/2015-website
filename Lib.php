@@ -57,8 +57,50 @@ class Issue
         return $issue;
     }
 
+}
 
+class Antivirus
+{
+    public $id;
+    public $name;
+    public $image;
+    public $votes = 0;
 
+    public function update()
+    {
+        $res = DB::query('UPDATE antiviruses SET name=?,votes=? WHERE id=?',[
+            $this->name, $this->votes, $this->id
+        ]);
+    }
+
+    public static function findAll()
+    {
+        $res = DB::query('SELECT * FROM antiviruses ORDER BY votes DESC');
+        $avs = [];
+        while($row = $res->fetch()){
+
+            $avs[] = static::fromRow($row);
+        }
+
+        return $avs;
+    }
+
+    public static function find($id)
+    {
+        $res = DB::query('SELECT * FROM antiviruses WHERE id=?',[$id]);
+        $row = $res->fetch();
+        if($row)
+            return static::fromRow($row);
+    }
+
+    public static function fromRow($row)
+    {
+        $av = new static();
+        $av->id = (int) $row['id'];
+        $av->name = $row['name'];
+        $av->image = $row['image'];
+        return $av;
+    }
 
 }
 
