@@ -99,6 +99,7 @@ class Antivirus
         $av->id = (int) $row['id'];
         $av->name = $row['name'];
         $av->image = $row['image'];
+        $av->votes = (int) $row['votes'];
         return $av;
     }
 

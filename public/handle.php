@@ -12,6 +12,12 @@ switch(Request::any('request')){
     case 'issue-vote':
         $resp = voteIssue(Request::any('id'));
         break;
+    case 'avs':
+        $resp = allAVs();
+        break;
+    case 'av-vote':
+        $resp = voteAV(Request::any('id'));
+        break;
 
 }
 
@@ -64,4 +70,19 @@ function voteIssue($id)
     $issue->votes += 1;
     $issue->update();
     return $issue;
+}
+
+function allAVs()
+{
+    return Antivirus::findAll();
+}
+
+function voteAV($id)
+{
+    $av = Antivirus::find($id);
+    if(!$av)
+        return ['error' => 'Antivirus not found'];
+    $av->votes += 1;
+    $av->update();
+    return $av;
 }

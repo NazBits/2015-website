@@ -141,5 +141,26 @@ body {
 .issue-viewer .vote-count {
     font-size:15pt;
     font-weight:normal;
+}
 
+.av-offer {
+    text-align:center;
+    font-size:15pt;
+}
+
+.av-item .name {
+    padding:0px;
+    margin:0px;
+    display:inline-block;
+    font-size:28pt;
+}
+
+.av-item .book {
+    display:inline-block;
+    cursor:pointer;
+    color:rgb(104, 148, 112);
+}
+
+.av-item .vote-count {
+    font-size:28pt;
 }

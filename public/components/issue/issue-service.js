@@ -47,7 +47,6 @@ angular.module('iClinic.issueService',['iClinic.requestService'])
         Request.get('issues',{}).then(function(data){
             scope.issues = data;
             scope.loaded = true;
-            console.log('loaded');
             deferred.resolve(data);
         });
         return deferred.promise;
