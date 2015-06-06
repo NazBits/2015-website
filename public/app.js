@@ -19,4 +19,8 @@ angular.module('iClinic',['ngRoute','iClinic.new','iClinic.issues','iClinic.anti
 }])
 .controller('RootController',['$scope','$location', function($scope,$location){
     $scope.page = $location.path();
+    $scope.active = function(path)
+    {
+        $scope.page = '/' + path;
+    };
 }]);
