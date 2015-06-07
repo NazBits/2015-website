@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../Lib.php';
 
 $resp = null;
@@ -50,6 +51,8 @@ function packageResponse($res)
 
 function createIssue($description)
 {
+    if(!$description)
+        return ['error'=>'Please explain your issue.'];
     $issue = new Issue();
     $issue->description = $description;
     $issue->votes = 0;
@@ -64,11 +67,14 @@ function allIssues()
 
 function voteIssue($id)
 {
+    if(Session::issueVoted($id))
+        return ['error' => 'You have already said that.'];
     $issue = Issue::find($id);
     if(!$issue)
         return ['error' => 'Issue not found'];
     $issue->votes += 1;
     $issue->update();
+    Session::saveIssueVote($id);
     return $issue;
 }
 
@@ -79,10 +85,13 @@ function allAVs()
 
 function voteAV($id)
 {
+    if(Session::avBooked($id))
+        return ['error' => 'You have already booked this antivirus.'];
     $av = Antivirus::find($id);
     if(!$av)
         return ['error' => 'Antivirus not found'];
     $av->votes += 1;
     $av->update();
+    Session::saveAVBook($id);
     return $av;
 }

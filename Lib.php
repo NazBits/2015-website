@@ -105,6 +105,46 @@ class Antivirus
 
 }
 
+class Session
+{
+    public static function init()
+    {
+        if(!isset($_SESSION)){
+            session_set_cookie_params(864000);
+            session_start();
+        }
+        if(!isset($_SESSION['init'])){
+            $_SESSION['init'] = true;
+            $_SESSION['issueVotes'] = [];
+            $_SESSION['avBooked'] = [];
+        }
+    }
+
+    public function issueVoted($issueId)
+    {
+        self::init();
+        return isset($_SESSION['issueVotes'][$issueId]);
+    }
+
+    public function saveIssueVote($issueId)
+    {
+        self::init();
+        $_SESSION['issueVotes'][$issueId] = true;
+    }
+
+    public function avBooked($avId)
+    {
+        self::init();
+        return isset($_SESSION['avBooked'][$avId]);
+    }
+
+    public function saveAVBook($avId)
+    {
+        self::init();
+        $_SESSION['avBooked'][$avId] = true;
+    }
+}
+
 class Request
 {
     public static function post($var,$default)
