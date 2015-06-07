@@ -132,9 +132,11 @@ class Session
         $_SESSION['issueVotes'][$issueId] = true;
     }
 
-    public function avBooked($avId)
+    public function avBooked($avId = null)
     {
         self::init();
+        if(!$avId)
+            return count($_SESSION['avBooked']) > 0;
         return isset($_SESSION['avBooked'][$avId]);
     }
 

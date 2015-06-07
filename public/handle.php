@@ -85,8 +85,8 @@ function allAVs()
 
 function voteAV($id)
 {
-    if(Session::avBooked($id))
-        return ['error' => 'You have already booked this antivirus.'];
+    if(Session::avBooked())
+        return ['error' => 'You have already booked an antivirus.'];
     $av = Antivirus::find($id);
     if(!$av)
         return ['error' => 'Antivirus not found'];
