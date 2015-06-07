@@ -7,7 +7,7 @@
         <p class="av-offer">Genuine Antivirus from 350 bob</p>
         <div class="list-group">
             <div class="av-item list-group-item" ng-repeat="av in avs">
-                <h3 class="name">{{av.name}}</h3>
+                <div class="name"><img class="image" ng-src="images/{{av.image}}" ng-title="{{av.name}}" tooltip="{{av.name}}"/></div>
                 <div class="book pull-right" ng-click="vote(av)" tooltip="Book {{av.name}}">
                     <span class="vote-count"><i class="fa fa-arrow-circle-o-up"></i> <span>{{av.votes}}</span></span>
                 </div>
