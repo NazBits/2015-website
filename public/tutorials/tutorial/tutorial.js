@@ -3,6 +3,7 @@ angular.module('tutorials.tutorial',['tutorials.tutorialService'])
     Tutorials.all().then(function(tutorials){
         $scope.tutorial = Tutorials.byId($routeParams.tutorialId);
         $scope.selectedLesson = $scope.tutorial.lessons[0];
+        Tutorials.select($scope.tutorial);
     });
 
     $scope.page = 'info';
@@ -23,6 +24,6 @@ angular.module('tutorials.tutorial',['tutorials.tutorialService'])
     }
 
     $scope.lessonPage = 'topics';
-    
+
 
 }]);

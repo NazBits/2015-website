@@ -14,8 +14,9 @@
     <div class="row">
             <div class="row">
                 <div class="col-sm-3" id="nav-wrapper">
-                    <ul id="tutorials-list" role="navigation">
-                        <li ng-repeat="tutorial in tutorials">
+                    <h5>Tutorials:</h5>
+                    <ul id="tutorials-list" class="nav nav-pills nav-stacked" role="navigation">
+                        <li class="" ng-repeat="tutorial in tutorials" ng-class="{active: isSelectedTutorial(tutorial)}">
                             <a href="#/{{tutorial.id}}">{{tutorial.name}}</a>
                         </li>
                     </ul>

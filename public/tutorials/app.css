@@ -1,28 +1,25 @@
 body {
     padding:40px;
     font-family:segoe ui;
-    background-color:;
+}
+.page-header {
+    margin-top:0px;
 }
 
-#main-wrapper {
-    background-color:white;
-}
-
-#nav-wrapper {
-    padding-top:100px;
-}
-
-#tutorials-list {
-    list-style:none;
-    padding:0px;
-}
-
-#tutorials-list a{
+.lesson-list a {
     display:inline-block;
     text-decoration:none;
+    cursor:default;
 }
 
-#tutorials-list li:active a {
-    font-weight:bold;
-    text-decoration:none;
+.lesson-list li:hover a,.lesson-list .active a {
+    color:white;
+}
+
+.nav-tabs {
+    margin-bottom:10px;
+}
+
+.nav-pills {
+    cursor:pointer;
 }

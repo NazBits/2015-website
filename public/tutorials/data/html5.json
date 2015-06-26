@@ -8,11 +8,10 @@
             "name":"Kevin Aseso"
         },
         {
-            "name":"Clement Habinshuti",
-            "phone":"0726166685"
+            "name":"Clement Habinshuti"
         }
     ],
-    "overview":"Learn front-end web technologies including HTML5, CSS, Bootstrap Javascript and jQuery",
+    "overview":"Learn front-end web technologies including HTML5, CSS, Bootstrap Javascript and jQuery.",
     "lessons":[
         {
             "name":"Introduction to HTML5",
@@ -100,10 +99,6 @@
                 },
                 {
                     "name":"Javascript at W3Schools",
-                    "link":""
-                },
-                {
-                    "name":"",
                     "link":""
                 }
             ]

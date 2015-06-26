@@ -1,0 +1,88 @@
+{
+    "name":"Practical Introduction to Electronics and Microcontrollers",
+    "instructors":[
+        {
+            "name":"Bernard Muigai"
+        }
+    ],
+    "overview":"Learn the fundamentals of electronics and microcontrollers from a practical approach.",
+    "lessons":[
+        {
+            "name":"DAY 1: Intro to Electronics Components and Electrical Energy",
+            "topics":[
+                "Electricity and Electrical Energy",
+                "Current and Voltage, Power, DC and AC",
+                "Resistors and Ohm's Law",
+                "Resistors in series and parallel"
+            ],
+            "resources":[
+
+            ]
+        },
+
+        {
+            "name":"DAY 2: Intro to semiconductors, circuits and biasing",
+            "topics":[
+                "Semiconductors",
+                "Capacitors",
+                "PN Junction and Diodes",
+                "Transistors, as switch and as amplifier",
+                "Other semiconductors"
+            ],
+            "resources":[
+
+            ]
+
+        },
+
+        {
+            "name":"DAY 3: Practical Electronics Design (Part 1)",
+            "topics":[
+                "Computer-Aided Design and Simulation",
+                "Signal Generators",
+                "Intro to Transformers",
+                "Micro-Project Proposal"
+            ],
+            "resources":[
+                {
+                    "name":"eBooks",
+                    "link":"./data/electronics/day3.zip"
+                },
+                {
+                    "name":"Power Supply and Battery Charger Circuit",
+                    "link":"./data/electronics/Power Supply and Battery Charger Circuit.pdf"
+                },
+                {
+                    "name":"Electronics Encyclopedia",
+                    "link":"./data/electronics/Electronics Encyclopedia.pdf"
+                }
+            ]
+        },
+        {
+            "name":"DAY 4: Practical Electronics Design (Part 2)",
+            "topics":[
+                "Introduction to PCB's",
+                "Soldering Skills",
+                "Real World Electronics Analysis",
+                "Project Implementation"
+            ],
+            "resources":[
+            ]
+        },
+        {
+            "name":"DAY 5: Introduction to Microcontrollers",
+            "topics":[
+                "AVR Family",
+                "PIC Family",
+                "Introduction to Programmers",
+                "Theory of Operation",
+                "DIY and Off-the-shelf Programmers",
+                "Programming Microcontrollers"
+            ],
+            "resources":[
+            ]
+        }
+
+
+    ]
+}

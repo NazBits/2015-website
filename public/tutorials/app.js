@@ -6,6 +6,20 @@ angular.module('tutorials',['ngRoute','tutorials.tutorialService','tutorials.tut
             templateUrl:'tutorial/tutorial.html'
         })
 }])
-.controller('MainController',['$scope','TutorialService',function($scope,TutorialService){
-    $scope.tutorials = TutorialService.tutorials;
+.controller('MainController',['$scope','TutorialService','$routeParams',function($scope,Tutorials, $routeParams){
+
+    Tutorials.all().then(function(tutorials){
+        $scope.tutorials = tutorials;
+    });
+
+    $scope.selectedTutorial = null;
+    $scope.selectTutorial = function(tutorial)
+    {
+        $scope.selectedTutorial = tutoral;
+    }
+    $scope.isSelectedTutorial = function(tutorial)
+    {
+        return tutorial == Tutorials.selected;
+    }
+
 }]);

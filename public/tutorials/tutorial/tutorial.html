@@ -17,14 +17,14 @@
                 <h3>Instructors</h3>
                 <ul>
                     <li ng-repeat="instructor in tutorial.instructors">
-                        {{instructor.name}} - {{instructor.phone}}
+                        {{instructor.name}}
                     </li>
                 </ul>
 
             </div>
             <div class="lesson-viewer" ng-show="page=='lessons'">
                 <h3>Lessons</h3>
-                <div class="col-sm-4 list-group">
+                <div class="col-sm-4 list-group lesson-list">
                     <div class="list-group-item" ng-repeat="lesson in tutorial.lessons"
                         ng-click="select(lesson)" ng-class="{active:isSelected(lesson)}">
                         <a>{{lesson.name}}</a>
@@ -46,7 +46,7 @@
                     <div ng-show="lessonPage=='resources'">
                         <ul>
                             <li ng-repeat="resource in selectedLesson.resources">
-                                <a class="link" href="{{resource.link}}">{{resource.name}}</a>
+                                <a class="link" href="{{resource.link}}" target="_blank">{{resource.name}}</a>
                             </li>
                         </ul>
                     </div>
