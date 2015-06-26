@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NazBits Tutorials</title>
+    <base href="/tutorials/index.html">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bower_components/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./app.css" rel="stylesheet">
+</head>
+
+<body ng-app="tutorials">
+
+<div class="container-fluid" id="main-wrapper" ng-controller="MainController">
+    <div class="row">
+            <div class="row">
+                <div class="col-sm-3" id="nav-wrapper">
+                    <ul id="tutorials-list" role="navigation">
+                        <li ng-repeat="tutorial in tutorials">
+                            <a href="#/{{tutorial.id}}">{{tutorial.name}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-9" id="page-wrapper">
+                    <ng-view></ng-view>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="../bower_components/angular/angular.min.js"></script>
+<script src="../bower_components/angular-route/angular-route.min.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="../bower_components/underscore/underscore-min.js"></script>
+<script src="../bower_components/underscore.string/dist/underscore.string.min.js"></script>
+<script src="./app.js"></script>
+<script src="./components/tutorial/tutorial-service.js"></script>
+<script src="./tutorial/tutorial.js"></script>
+</body>
+
+</html>

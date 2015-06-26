@@ -1,0 +1,58 @@
+<div class="page">
+    <div ng-hide="tutorial" class="page-content">
+        <div class="jumbotron">
+            Select a tutorial.
+        </div>
+    </div>
+    <div ng-show="tutorial" class="row">
+        <h2 class="page-header">{{tutorial.name}}</h2>
+        <div class="page-content">
+            <ul class="nav nav-pills" role="navigation">
+                <li ng-class="{active:page=='info'}"><a ng-click="view('info')">Info</a></li>
+                <li ng-class="{active:page=='lessons'}"><a ng-click="view('lessons')">Lessons</a></li>
+            </ul>
+            <div class="info-viewer" ng-show="page=='info'">
+                <h3>Overview</h3>
+                <p>{{tutorial.overview}}</p>
+                <h3>Instructors</h3>
+                <ul>
+                    <li ng-repeat="instructor in tutorial.instructors">
+                        {{instructor.name}} - {{instructor.phone}}
+                    </li>
+                </ul>
+
+            </div>
+            <div class="lesson-viewer" ng-show="page=='lessons'">
+                <h3>Lessons</h3>
+                <div class="col-sm-4 list-group">
+                    <div class="list-group-item" ng-repeat="lesson in tutorial.lessons"
+                        ng-click="select(lesson)" ng-class="{active:isSelected(lesson)}">
+                        <a>{{lesson.name}}</a>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <h4>{{selectedLesson.name}}</h4>
+                    <ul class="nav nav-tabs">
+                        <li ng-class="{active: lessonPage=='topics'}"><a ng-click="lessonPage='topics'">Topics</a></li>
+                        <li ng-class="{active: lessonPage=='resources'}"><a ng-click="lessonPage='resources'">Resources</a></li>
+                    </ul>
+                    <div ng-show="lessonPage=='topics'">
+                        <ul>
+                            <li ng-repeat="topic in selectedLesson.topics">
+                                {{topic}}
+                            </li>
+                        </ul>
+                    </div>
+                    <div ng-show="lessonPage=='resources'">
+                        <ul>
+                            <li ng-repeat="resource in selectedLesson.resources">
+                                <a class="link" href="{{resource.link}}">{{resource.name}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

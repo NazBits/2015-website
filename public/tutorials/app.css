@@ -1,0 +1,28 @@
+body {
+    padding:40px;
+    font-family:segoe ui;
+    background-color:;
+}
+
+#main-wrapper {
+    background-color:white;
+}
+
+#nav-wrapper {
+    padding-top:100px;
+}
+
+#tutorials-list {
+    list-style:none;
+    padding:0px;
+}
+
+#tutorials-list a{
+    display:inline-block;
+    text-decoration:none;
+}
+
+#tutorials-list li:active a {
+    font-weight:bold;
+    text-decoration:none;
+}

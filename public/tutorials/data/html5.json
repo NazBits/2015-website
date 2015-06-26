@@ -1,0 +1,137 @@
+{
+    "name":"Intro to Front-End Web",
+    "instructors":[
+        {
+            "name":"Kevin Nderitu"
+        },
+        {
+            "name":"Kevin Aseso"
+        },
+        {
+            "name":"Clement Habinshuti",
+            "phone":"0726166685"
+        }
+    ],
+    "overview":"Learn front-end web technologies including HTML5, CSS, Bootstrap Javascript and jQuery",
+    "lessons":[
+        {
+            "name":"Introduction to HTML5",
+            "topics":[
+                "Overview of client-side technologies",
+                "Client-Server architecture in web apps",
+                "HTML5 Structure and Syntax",
+                "Building a simple page",
+                "HTML DOM tree"
+            ],
+            "resources":[
+                {
+                    "name":"Lesson Notes",
+                    "link":""
+                },
+                {
+                    "name":"HTML5 at W3Schools",
+                    "link":""
+                }
+            ]
+        },
+
+        {
+            "name":"Introduction to CSS",
+            "topics":[
+                "CSS Syntax",
+                "Inline, Internal and External CSS",
+                "Common Selectors",
+                "The id and class attributes",
+                "Common CSS properties: fonts, colors, size, etc.",
+                "Box Model",
+                "Styling a basic HTML page"
+            ],
+            "resources":[
+                {
+                    "name":"Lesson Notes",
+                    "link":""
+                },
+                {
+                    "name":"CSS at W3Schools",
+                    "link":""
+                }
+            ]
+
+        },
+
+        {
+            "name":"Bootstrap",
+            "topics":[
+                "Responsinve layout design",
+                "Installing Bootstrap",
+                "Rows, Columns and screen widths",
+                "Common Bootstrap components and classes",
+                "Building the Project UI"
+            ],
+            "resources":[
+                {
+                    "name":"Lesson Notes",
+                    "link":""
+                },
+                {
+                    "name":"Bootstrap at W3Schools",
+                    "link":""
+                },
+                {
+                    "name":"Bootstrap offical site",
+                    "link":"https:://getbootstrap.com"
+                }
+            ]
+        },
+
+        {
+            "name":"Javascript",
+            "topics":[
+                "Javascript as a scripting language",
+                "Variables and Data Types",
+                "Control flow: branching and loops",
+                "Functions",
+                "Javascript Objects"
+            ],
+            "resources":[
+                {
+                    "name":"Lesson Notes",
+                    "link":""
+                },
+                {
+                    "name":"Javascript at W3Schools",
+                    "link":""
+                },
+                {
+                    "name":"",
+                    "link":""
+                }
+            ]
+        },
+
+        {
+            "name":"jQuery",
+            "topics":[
+                "jQuery Basics",
+                "Dynamic DOM Manipulation",
+                "JSON",
+                "Aynschronous (AJAX) Requests",
+                "Building the Project app logic and interactivity"
+            ],
+            "resources":[
+                {
+                    "name":"Lesson Notes",
+                    "link":""
+                },
+                {
+                    "name":"jQuery at W3Schools",
+                    "link":""
+                },
+                {
+                    "name":"jQuery Official Docs",
+                    "link":""
+                }
+            ]
+        }
+    ]
+}
