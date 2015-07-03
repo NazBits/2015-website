@@ -94,12 +94,12 @@
             ],
             "resources":[
                 {
-                    "name":"Lesson Notes",
-                    "link":""
+                    "name":"Javascript at W3Schools",
+                    "link":"http://http://www.w3schools.com/js/default.asp"
                 },
                 {
-                    "name":"Javascript at W3Schools",
-                    "link":""
+                    "name":"Javascript at CodeCademy",
+                    "link":"http://www.codecademy.com/en/tracks/javascript"
                 }
             ]
         },
