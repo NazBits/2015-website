@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Intro to JS</title>
+</head>
+
+<body>
+    <p id="para"></p>
+    <script>
+
+        function setColor(color){
+            document.body.style.backgroundColor=color;
+        }
+
+
+        var name = prompt(" Enter your name ");
+
+        var p=document.getElementById('para');
+        p.textContent = "hello, " + name ;
+
+
+        var gender = prompt("Enter your gender");
+
+        if(gender == "male"){
+            setColor("blue");
+        }
+        else if(gender == "female"){
+            setColor("purple");
+        }
+        else {
+            alert( "invalid gender selected");
+        }
+
+
+    </script>
+
+</body>
+</html>
