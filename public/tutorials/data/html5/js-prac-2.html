@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>Intro to JS</title>
+</head>
+
+<body>
+    <p id="para"></p>
+    <script>
+
+        /*
+        this function sets the background of the
+        page to the specified color
+        */
+        function setColor(color){
+            document.body.style.backgroundColor = color;
+        }
+
+        // array where we'll save students
+        var students = [];
+
+        // add students until the user says no
+        var answer = confirm("Do you want to add a student?");
+        while(answer == true){
+            //create a new student and get details from user
+            var student = {}
+            student.name = prompt("Enter student name.");
+            student.grade = prompt("Enter student's grade.");
+            student.favColor = prompt("Enter student's favorite color");
+
+            //add created student to the students list
+            students.push(student);
+
+            answer = confirm("Do you want to add another student?");
+        }
+
+        /*
+        this function displays a greeting to a specified
+        student and sets the background to the student's
+        favorite color
+        */
+        function sayHi(st){
+            setColor(st.favColor);
+            alert("Hello " + st);
+        }
+
+        /*
+        display a greeting to each student
+        */
+        students.forEach(sayHi);
+
+    </script>
+
+</body>
+</html>

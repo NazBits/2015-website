@@ -1,0 +1,13 @@
+body {
+    padding-top:70px;
+    margin:auto 20px;
+    font-family:calibri;
+}
+
+#formContainer h3{
+    margin-top:0px;
+}
+
+.panel-tile {
+    font-weight:bold;
+}

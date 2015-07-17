@@ -8,19 +8,29 @@
     <p id="para"></p>
     <script>
 
+        /*
+        this function sets the background of the
+        page to the specified color
+        */
         function setColor(color){
-            document.body.style.backgroundColor=color;
+            document.body.style.backgroundColor = color;
         }
 
-
+        // get the user's name
         var name = prompt(" Enter your name ");
 
-        var p=document.getElementById('para');
-        p.textContent = "hello, " + name ;
+        /*
+        write a greeting to the user in the
+        element with id 'para'
+        */
+        var p = document.getElementById('para');
+        p.textContent = "Hello, " + name ;
 
 
+        // get the gender of user
         var gender = prompt("Enter your gender");
 
+        //set the bakground color based on the user's gender
         if(gender == "male"){
             setColor("blue");
         }
@@ -28,10 +38,9 @@
             setColor("purple");
         }
         else {
-            alert( "invalid gender selected");
+            alert("Invalid gender selected.");
         }
-
-
+        
     </script>
 
 </body>

@@ -94,16 +94,24 @@
             ],
             "resources":[
                 {
-                    "name":"Javascript at W3Schools",
+                    "name":"Javascript Tutorials - W3Schools",
                     "link":"http://www.w3schools.com/js/default.asp"
                 },
                 {
-                    "name":"Javascript at CodeCademy",
+                    "name":"Interactive Javascript Trail - CodeCademy",
                     "link":"http://www.codecademy.com/en/tracks/javascript"
                 },
                 {
+                    "name":"Learn Javascript using Graphics and Animations - Khan Academy",
+                    "link":"https://www.khanacademy.org"
+                }
+                {
                     "name":"Intro to JS Practicals 1",
                     "link":"./data/html5/js-prac-1.html"
+                },
+                {
+                    "name":"Intro to JS Practicals 2",
+                    "link":"./data/html5/js-prac-2.html"
                 }
             ]
         },
@@ -114,21 +122,28 @@
                 "jQuery Basics",
                 "Dynamic DOM Manipulation",
                 "JSON",
-                "Aynschronous (AJAX) Requests",
                 "Building the Project app logic and interactivity"
             ],
             "resources":[
                 {
-                    "name":"Lesson Notes",
-                    "link":""
+                    "name":"Project Demo",
+                    "link":"./data/html5/lesson5/index.html"
+                },
+                {
+                    "name":"Project Start Zip",
+                    "link":"./data/html5/lesson5-start.zip"
+                },
+                {
+                    "name":"Project Final Zip",
+                    "link":"./data/html5/lesson5-final.zip"
                 },
                 {
                     "name":"jQuery at W3Schools",
-                    "link":""
+                    "link":"http://w3schools.com/jquery"
                 },
                 {
-                    "name":"jQuery Official Docs",
-                    "link":""
+                    "name":"jQuery Official Site",
+                    "link":"http://jquery.com"
                 }
             ]
         }
