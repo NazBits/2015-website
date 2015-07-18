@@ -1,0 +1,140 @@
+{
+    "name":"Intel XDK Bootcamp",
+    "instructors":[
+        {
+            "name":"Kevin Nderitu"
+        },
+        {
+            "name":"Clement Habinshuti"
+        }
+    ],
+    "overview":"Learn to build cross-platform hybrid mobile with HTML5 and Javascript using Intel XDK",
+    "lessons":[
+        {
+            "name":"0. Setup",
+            "topics":[
+                "Install Intel XDK",
+                "Create Intel Developer Zone Account",
+                "Install Intel XDK App Preview"
+            ],
+            "resources":[
+                {
+                    "name":"Intel XDK Download Page",
+                    "link":"https://software.intel.com/en-us/intel-xdk"
+                },
+                {
+                    "name":"Intel Developer Zone",
+                    "link":"https://software.intel.com/registration/?lang=en-us"
+                },
+                {
+                    "name":"Intel XDK App Preview (Google Play Store)",
+                    "link":"https://play.google.com/store/apps/details?id=com.intel.html5tools.apppreview"
+                }
+
+            ]
+        },
+
+        {
+            "name":"1. Overview of Hybrid Mobile Apps and Intel XDK",
+            "topics":[
+                "Overview of Hybrid Mobile Apps",
+                "About Cordova and XDK Plugins",
+                "Overview of Intel XDK"
+            ],
+            "resources":[
+                {
+                    "name":"Lesson Powerpoint",
+                    "link":""
+                },
+                {
+                    "name":"Introduction to Intel XDK (Official Site)",
+                    "link":"https://software.intel.com/en-us/xdk/docs/intel-xdk-introduction"
+                }
+            ]
+
+        },
+
+        {
+            "name":"2. Sample App",
+            "topics":[
+                "Projects in Intel XDK",
+                "Develop, Test and Package an App",
+                "Using Device Facilities using Cordova and XDK Plugins"
+
+            ],
+            "resources":[
+                {
+                    "name":"Basic Intel XDK index.html",
+                    "link":"http://pastebin.com/W4RVCtr0"
+                },
+                {
+                    "name":"Intel XDK Tabs Overview",
+                    "link":"https://software.intel.com/en-us/xdk/docs/intel-xdk-overview"
+                },
+                {
+                    "name":"Apache Cordova API Docs",
+                    "link":"http://cordova.apache.org/docs/en/4.0.0/"
+                },
+                {
+                    "name":"Intel XDK API Docs",
+                    "link":"https://software.intel.com/en-us/xdk/docs/intel-xdk-api-cordova-plugin-methods-properties-events"
+                },
+                {
+                    "name":"Cordova Plugins Registry",
+                    "link":"http://plugins.cordova.io/npm/index.html"
+                }
+            ]
+        },
+
+        {
+            "name":"3. Overview of UI Frameworks",
+            "topics":[
+                "Common UI Frameworks"
+            ],
+            "resources":[
+                {
+                    "name":"App Framework",
+                    "link":"http://www.w3schools.com/js/default.asp"
+                },
+                {
+                    "name":"jQuery Mobile",
+                    "link":"http://demos.jquerymobile.com/1.4.5/"
+                },
+                {
+                    "name":"Topcoat",
+                    "link":"http://topcoat.io/"
+                },
+                {
+                    "name":"Onsen",
+                    "link":"http://onsen.io/"
+                },
+                {
+                    "name":"Ratchet",
+                    "link":"http://goratchet.com/"
+                },
+                {
+                    "name":"Ionic Framework",
+                    "link":"http://ionicframework.com/"
+                }
+            ]
+        },
+        {
+            "name":"4. Sample App 2",
+            "topics":[
+                "Build an App Walkthrough"
+            ],
+            "resources":[
+
+            ]
+        },
+        {
+            "name":"5. Hackathon",
+            "topics":[
+                "Build Your own App"
+            ],
+            "resources":[
+
+            ]
+        }
+    ]
+}
