@@ -6,14 +6,13 @@ This website was initially created to host the first NazBits iClinic event back 
 It was later extended to also host lesson plans and resources of some of the mini "courses"
 organised and held by NazBits on campus.
 
-## About the website
+The website is currently (still) hosted on Heroku [https://nazbits.herokuapp.com](https://nazbits.herokuapp.com).
 
-The website is currently (still) hosted on Heroku [https://nazbits.herokuapp.com](https://nazbits.herokuapp.com)
 The site is made up of two main applications:
 
 ### iClinic
 The first is the iClinic app, which is on the homepage. It was used during
-the first iClinic to allow anyone on campus to post issues they were facing with their laptops
+the first iClinic to allow anyone on campus to post and upvote issues they were facing on their laptops/devices
 as well as to "book" an antivirus. This allowed us to know in advance which problems we would need
 to fix and to know which antivirus was in demand so that we could buy the necessary licenses.
 
