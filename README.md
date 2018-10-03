@@ -25,7 +25,7 @@ database, requests and models. The requests are handled in the `public/handle.ph
 
 ### Tutorials
 This app contains info and lesson plans about some of the trainings we held. It's pretty much
-and indepent app that was squeezed on the website cause I was too lazy to create a separate project/hosting
+separate hastily-done app that was squeezed on the website cause I was too lazy to create a separate project/hosting
 for it, or to create a proper homepage for the NazBits website with links to different sections.
 
 To access the app, you have manually enter the `/tutorial`
