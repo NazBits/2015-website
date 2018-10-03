@@ -3,7 +3,7 @@
 I found this source code on Heroku and decided to put it here as a historical reference.
 
 This website was initially created to host the first NazBits iClinic event back in 2015.
-It was later extended to also host lesson plans and resources of some of the mini "courses"
+It was later extended to also host lesson plans and resources of some of the "trainings"
 organised and held by NazBits on campus.
 
 The website is currently (still) hosted on Heroku [https://nazbits.herokuapp.com](https://nazbits.herokuapp.com).
